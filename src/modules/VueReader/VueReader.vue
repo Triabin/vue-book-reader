@@ -209,10 +209,10 @@ const toggleToc = () => {
 }
 
 const next = () => {
-  bookRef.value?.nextPage()
+  bookRef.value?.nextPage();
 }
 const pre = () => {
-  bookRef.value?.prevPage()
+  bookRef.value?.prevPage();
 }
 
 const setLocation = (href, close = true) => {
@@ -220,6 +220,12 @@ const setLocation = (href, close = true) => {
   expandedToc.value = false
   expandedToc.value = !close
 }
+
+defineExpose({
+  next,
+  pre,
+  setLocation,
+});
 </script>
 <style>
 /* container */

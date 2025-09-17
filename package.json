@@ -1,6 +1,7 @@
 {
-  "name": "vue-book-reader",
-  "version": "1.0.9",
+  "name": "@triabin/vue-book-reader",
+  "version": "1.0.0",
+  "description": "Forked from jinhuan138/vue-book-reader, add some features",
   "type": "module",
   "main": "lib/vue-book-reader.umd.js",
   "module": "lib/vue-book-reader.es.js",
@@ -18,10 +19,9 @@
     "CBZ",
     "PDF"
   ],
-  "homepage": "https://jinhuan138.github.io/vue-book-reader/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jinhuan138/vue-book-reader.git"
+    "url": "https://github.com/Triabin/vue-book-reader"
   },
   "scripts": {
     "dev": "vite",
