@@ -16,13 +16,13 @@ export default function wheelListener(
   const allowedTime = 50
 
   let dist: number = 0
-  let isScrolling: NodeJS.Timeout
+  let isScrolling: number | null = null
 
   el.addEventListener('wheel', (e: epubEvent) => {
     if (e.ignore) return
     e.ignore = true
 
-    clearTimeout(isScrolling)
+    isScrolling && clearTimeout(isScrolling)
 
     dist += e.deltaY
 

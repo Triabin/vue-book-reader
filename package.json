@@ -1,10 +1,13 @@
 {
   "name": "@triabin/vue-book-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forked from jinhuan138/vue-book-reader, add some features",
   "type": "module",
   "main": "lib/vue-book-reader.umd.js",
   "module": "lib/vue-book-reader.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib"
   ],
@@ -40,9 +43,7 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.0",
     "vite-plugin-css-injected-by-js": "^3.5.0",
-    "vitepress": "1.0.0-rc.45",
     "vue": "^3.4.21",
-    "vue-book-reader": "^1.0.9",
     "vue-tsc": "^2.0.6"
   },
   "browser": {
@@ -51,6 +52,7 @@
   "packageManager": "pnpm@9.6.0",
   "preinstall": "npx only-allow pnpm",
   "dependencies": {
-    "core-js": "^3.45.1"
+    "core-js": "^3.45.1",
+    "foliate-js": "^1.0.1"
   }
 }
