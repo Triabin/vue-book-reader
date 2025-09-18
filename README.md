@@ -7,3 +7,4 @@ Forked from [jinhuan138/vue-book-reader](https://github.com/jinhuan138/vue-book-
 ## 变更
 
 1. defineExpose了VueReader组件中的`next`, `pre`, `setLocation`方法。
+2. VueReader组件新增`hidePrevNext: boolean`配置，用于配置是否隐藏上下一页按钮，默认为`false`。
