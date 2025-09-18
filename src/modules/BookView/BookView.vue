@@ -3,7 +3,7 @@
     <div class="viewHolder">
       <div ref="viewer" id="viewer" v-show="isLoaded"></div>
       <div v-if="!isLoaded">
-        <slot name="loadingView"> </slot>
+        <slot name="loadingView"/>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@ const initReader = () => {
   view.renderer.setStyles?.(
     getCSS({
       spacing: 1.4,
-      justify: true,
+      justify: false,
       hyphenate: true,
     }),
   )
