@@ -36,8 +36,8 @@
         </template>
       </book-view>
       <!-- 翻页 -->
-      <button class="arrow pre" @click="pre">‹</button>
-      <button class="arrow next" @click="next">›</button>
+      <button v-if="!props.hidePrevNext" class="arrow pre" @click="pre">‹</button>
+      <button v-if="!props.hidePrevNext" class="arrow next" @click="next">›</button>
     </div>
     <!-- 目录 -->
     <div v-if="showToc">
@@ -163,10 +163,6 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
-  title: {
-    type: String,
-    default: '',
-  },
   getRendition: {
     type: Function,
   },
@@ -174,6 +170,10 @@ const props = defineProps({
     type: String,
     default: '#fff',
   },
+  hidePrevNext: {
+    type: Boolean,
+    default: false,
+  }
 })
 
 const book = reactive({
