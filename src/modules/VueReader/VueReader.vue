@@ -28,6 +28,7 @@
         v-bind="$attrs"
         :tocChanged="onTocChange"
         :getRendition="onGetRendition"
+        @update:location="(detail) => emits('update:location', detail)"
       >
         <template #loadingView>
           <slot name="loadingView">
@@ -175,6 +176,7 @@ const props = defineProps({
     default: false,
   }
 })
+const emits = defineEmits(['update:location']);
 
 const book = reactive({
   toc: [], //目录

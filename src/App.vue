@@ -1,5 +1,5 @@
 <template>
-  <vue-reader url="/files/啼笑因缘.epub" :getRendition="getRendition">
+  <vue-reader url="/files/啼笑因缘.epub" :getRendition="getRendition" @update:location="locationChange">
   </vue-reader>
 </template>
 
@@ -7,6 +7,9 @@
 import VueReader from './modules/VueReader/VueReader.vue'
 import { ref } from 'vue'
 
+const locationChange = (detail) => {
+  console.log('update:location', detail);
+}
 const information = ref(null)
 const getCSS = (style) => [
   `
