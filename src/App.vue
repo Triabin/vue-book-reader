@@ -1,5 +1,5 @@
 <template>
-  <vue-reader url="/files/啼笑因缘.epub" :getRendition="getRendition" @update:location="locationChange">
+  <vue-reader url="/files/啼笑因缘.epub" :getRendition="getRendition" @update:location="locationChange" hideTitle>
   </vue-reader>
 </template>
 

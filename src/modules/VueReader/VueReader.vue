@@ -17,7 +17,7 @@
         <span class="tocButtonBar" style="top: 66%"></span>
       </button>
       <!-- 书名 -->
-      <slot name="title">
+      <slot v-if="!props.hideTitle" name="title">
         <div class="titleArea" :title="title || bookName">
           {{ title || bookName }}
         </div>
@@ -174,6 +174,10 @@ const props = defineProps({
   hidePrevNext: {
     type: Boolean,
     default: false,
+  },
+  hideTitle: {
+    type: Boolean,
+    default: false,
   }
 })
 const emits = defineEmits(['update:location']);
@@ -252,9 +256,9 @@ defineExpose({
 
 .container .titleArea {
   position: absolute;
-  top: 20px;
-  left: 50px;
-  right: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   color: #999;
   white-space: nowrap;
